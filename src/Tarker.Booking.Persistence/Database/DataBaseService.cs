@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Tarker.Booking.Application.Interfaces;
 using Tarker.Booking.Domain.Entities.Booking;
 using Tarker.Booking.Domain.Entities.Customer;
 using Tarker.Booking.Domain.Entities.User;
@@ -6,7 +7,7 @@ using Tarker.Booking.Persistence.Configuration;
 
 namespace Tarker.Booking.Persistence.Database
 {   
-    public class DataBaseService : DbContext
+    public class DataBaseService : DbContext, IDataBaseService
     {
         public DataBaseService(DbContextOptions options) : base(options)
         {
